@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2398d612-30cc-4b0b-99ea-5899a544c0fd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="59" lean-forward="true" selection-start-column="59" selection-end-column="59" />
+              <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -149,7 +147,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mbox-front" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -202,15 +200,16 @@
       <workItem from="1554130614287" duration="20808000" />
       <workItem from="1554212980634" duration="27180000" />
       <workItem from="1554303193140" duration="11865000" />
-      <workItem from="1554385448817" duration="35979000" />
+      <workItem from="1554385448817" duration="36233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152987000" />
+    <option name="totallyTimeSpent" value="153241000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -218,7 +217,7 @@
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32954547" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.25324675" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3961039" />
       <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.15733737" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" weight="0.32980332" />
@@ -540,7 +539,7 @@
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="59" lean-forward="true" selection-start-column="59" selection-end-column="59" />
+          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
