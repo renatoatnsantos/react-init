@@ -47,14 +47,20 @@ export default class Main extends Component {
                                     <thead>
                                         <tr className='text-center'>
                                             <th>Data / Hora</th>
-                                            <th>Quantidade</th>
                                             <th>Valor</th>
+                                            <th>Quantidade</th>
                                             <th>Volume</th>
                                         </tr>
                                     </thead>
-                                    <tbody id='table'>
+                                    <tbody id='table' className='text-center'>
 
                                     </tbody>
+                                    <tfoot>
+                                    <tr className='text-center'>
+                                        <td colSpan='3'><strong>Total</strong></td>
+                                        <td id='total' className='font-weight-bold'></td>
+                                    </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                         </div>
