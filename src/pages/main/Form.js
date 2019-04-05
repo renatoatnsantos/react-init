@@ -3,22 +3,64 @@ export default class form {
         constructor(){
             this.state = {
                 data : [],
-                volume : []
             }
         }
 
         formObject = (event) => {
             event.preventDefault()
+
             let $ = document.querySelector.bind(document);
             let date = $('#date');
             let price = $('#price');
             let amount = $('#amount');
+            let name = $('#name');
+            let description = $('#description');
 
-            let data = {date : this.formatDate(date) , price : this.formatPrice(price) , amount : amount.value , volume : this.formatPriceX(price , amount) };
+            let alert = '';
+            if(!name.value){
+                alert = 'Ensira um nome no campo.';
+                $('#alert-info').innerHTML = alert;
+                return false;
+            }
 
-            this.state.data.push(data)
-            this.createBodyTable()
-            this.total()
+            if(!description.value){
+                alert = 'Ensira uma descrição.';
+                $('#alert-info').innerHTML = alert;
+                return false;
+            }
+
+            if(!date.value){
+                alert = 'Ensira uma data no campo.';
+                $('#alert-info').innerHTML = alert;
+                return false;
+            }
+
+            if(!price.value){
+                alert = 'Ensira um valor.';
+                $('#alert-info').innerHTML = alert;
+                return false;
+            }
+
+            if(!amount.value || amount.value <= 0 ){
+                alert = 'Ensira uma quantidade válida.';
+                $('#alert-info').innerHTML = alert;
+                return false;
+            }
+
+            if(name.value && description.value && date.value && price.value && amount.value){
+                alert = '';
+                $('#alert-info').innerHTML = alert;
+
+                let data = {name : name.value , description : description.value , date : this.formatDate(date) , price : this.formatPrice(price) , amount : amount.value , volume : this.formatPriceX(price , amount) };
+                this.state.data.push(data)
+                this.createBodyTable()
+                this.total()
+                this.hours()
+
+            }
+
+
+
 
         }
 
@@ -32,7 +74,13 @@ export default class form {
                     return item;
                 })
             )
-            return `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`
+            return `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} - Hrs ${this.hours()} `
+        }
+
+        hours = () =>{
+            let hours = new Date()
+            hours = `${hours.getHours()}:${hours.getMinutes()}`
+            return hours;
         }
 
         formatInput = () =>{
@@ -83,7 +131,7 @@ export default class form {
                     return acumulador + total
             } , 0)
 
-            document.querySelector('#total').innerHTML = this.formatVolume(volume);
+            document.querySelector('#total').innerHTML = 'R$ ' + this.formatVolume(volume);
 
         }
 
@@ -91,6 +139,8 @@ export default class form {
             let table = `
                 ${this.state.data.map(item => `
                     <tr>
+                        <td>${item.name}</td>
+                        <td>${item.description}</td>
                         <td>${item.date}</td>
                         <td>${item.price}</td>
                         <td>${item.amount}</td>
@@ -100,6 +150,7 @@ export default class form {
         `;
             document.querySelector('#table').innerHTML = table;
         }
+
 
 }
 
